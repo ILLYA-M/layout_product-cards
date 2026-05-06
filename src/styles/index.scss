@@ -1,5 +1,5 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .body {
@@ -12,26 +12,29 @@ html {
   justify-content: center;
   flex-direction: column;
   width: 200px;
-  box-sizing: border-box;
+  border: 1px #f3f3f3 solid;
+  border-radius: 5px;
 }
+
 .botton {
   flex-wrap: nowrap;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-  padding-top: 40px;
+  padding: 36px 16px 16px;
 }
+
 // #region picture
 .picture {
-  padding-right: 8px;
-  padding-left: 8px;
-  padding-top: 16px;
+  display: block;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-top: 32px;
 }
 
 .picture__image {
+  width: 100%;
   height: 134px;
-  background-size: cover;
+  object-fit: contain;
 }
+
 // endregion
 
 // #region text
@@ -42,43 +45,44 @@ html {
   align-items: center;
 }
 
-.text__name {
-  height: 36px;
+.text--name {
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
   color: #060b35;
-  font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.text__code {
+.text--code {
+  font-weight: 400;
   padding-top: 4px;
   justify-content: flex-start;
   margin-right: auto;
-  height: 14px;
-  font-weight: 400;
   font-size: 10px;
+  line-height: 14px;
   color: #616070;
 }
 
-.text__price {
+.text--price {
+  padding-bottom: 16px;
   height: 18px;
   padding-top: 24px;
-  justify-content: space-between;
-  align-content: center;
+  place-content: center space-between;
 }
 
-.text__price__text {
+.text--price--text {
   font-weight: 400;
+  line-height: 18px;
   font-size: 12px;
   color: #616070;
 }
 
-.text__price__number {
+.text--price--number {
   font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
 }
 
 // endregion
@@ -90,11 +94,14 @@ html {
   height: 16px;
   width: 166px;
   padding-top: 16px;
-  font-size: 10px;
 }
 
-.text__reviews {
+.text--reviews {
+  font-weight: 400;
+  line-height: 14px;
+  color: #060b35;
   padding-left: 17px;
+  font-size: 10px;
 }
 
 // endregion
@@ -102,16 +109,15 @@ html {
 // #region button
 .button {
   display: flex;
-  padding-top: 16px;
   height: 40px;
 }
 
-.button__buy {
+.button--buy {
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   border: none;
   border-radius: 5px;
   background-color: #00acdc;
@@ -122,17 +128,17 @@ html {
   line-height: 16px;
 }
 
-.button__buy:hover {
+.button--buy:hover {
   border: 1px solid #00acdc;
   color: #00acdc;
-  background-color: #ffffff;
+  background-color: #fff;
 }
+
 // endregion
 
 // #region stars
 
 .stars {
-  
   display: flex;
 }
 
@@ -152,4 +158,5 @@ html {
 .stars--4 .stars__star:nth-child(-n + 4) {
   background-image: url(../images/star-active.svg);
 }
+
 // endregion
