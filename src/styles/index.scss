@@ -7,13 +7,13 @@ html {
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 200px;
-  border: 1px #f3f3f3 solid;
+  border: 1px solid #f3f3f3;
   border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 32px 16px 16px;
 }
 
 .botton {
@@ -29,10 +29,11 @@ html {
   padding-top: 32px;
 }
 
-.picture__image {
-  width: 100%;
+.card__image {
+  width: 160px;
   height: 134px;
-  object-fit: contain;
+  display: block;
+  margin: 0 auto 40px;
 }
 
 // endregion
@@ -46,13 +47,10 @@ html {
 }
 
 .text--name {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
   color: #060b35;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .text--code {
